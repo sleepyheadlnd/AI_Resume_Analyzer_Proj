@@ -86,15 +86,15 @@ form {
         @apply flex flex-col items-center gap-8 max-w-4xl text-center max-sm:gap-4;
     }
     .resumes-section {
-        @apply flex flex-wrap max-md:flex-col max-md:gap-4 gap-6 items-start max-md:items-center w-full max-w-[1850px] justify-evenly;
+        @apply flex flex-wrap max-md:flex-col max-md:gap-4 gap-4 items-start max-md:items-center w-full max-w-[1850px] justify-center;
     }
 
     .resume-card {
-        @apply flex flex-col gap-8 h-[560px] w-[350px] lg:w-[430px] xl:w-[490px] bg-indigo-200 rounded-2xl p-4;
+        @apply flex flex-col gap-2 scale-90 h-[480px] w-[350px] lg:w-[350px] xl:w-[380px] bg-indigo-200 rounded-2xl p-2;
     }
 
     .resume-card-header {
-        @apply flex flex-row gap-2 justify-between min-h-[110px] max-sm:flex-col items-center max-md:justify-center max-md:items-center;
+        @apply flex flex-row gap-2 justify-between min-h-[100px] max-sm:flex-col items-center max-md:justify-center max-md:items-center;
     }
 
     .feedback-section {
@@ -158,3 +158,4 @@ form {
         opacity: 1;
     }
 }
+
