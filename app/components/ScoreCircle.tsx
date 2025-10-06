@@ -6,6 +6,8 @@ const ScoreCircle = ({ score = 0}: { score: number }) => {
     const stroke = 8;
     const normalizedRadius = radius - stroke / 2;
     const circumference = 2 * Math.PI * normalizedRadius;
+
+
     //const progress = score / 100;
     //const strokeDashoffset = circumference * (1 - progress);
 
@@ -16,7 +18,7 @@ const ScoreCircle = ({ score = 0}: { score: number }) => {
         const animation = setTimeout(() =>
         {
             setProgress(score / 100); // animate to final score
-        }, 100);
+        }, 400);
         return () => clearTimeout(animation);
     }, [score]);
 
@@ -39,6 +41,7 @@ const ScoreCircle = ({ score = 0}: { score: number }) => {
                     strokeWidth={stroke}
                     fill="transparent"
                 />
+
                 {/* Partial circle with gradient */}
                 <defs>
                     <linearGradient id="grad" x1="1" y1="0" x2="0" y2="1">
@@ -56,7 +59,7 @@ const ScoreCircle = ({ score = 0}: { score: number }) => {
                     strokeDasharray={circumference}
                     strokeDashoffset={strokeDashoffset}
                     strokeLinecap="round"
-                    style={{ transition: "stroke-dashoffset 0.30s ease-out" }}
+                    style={{ transition: "stroke-dashoffset 0.5s ease-out" }}
 
                 />
             </svg>
